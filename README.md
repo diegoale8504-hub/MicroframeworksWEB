@@ -65,8 +65,7 @@ It:
 Open in browser:
 
 - http://localhost:8080/index.html
-![img.png](src/main/resources/Images/img.png)
-
+![img.png](src/main/resources/Imageshtml/img.png)
 ### 2) REST services
 
 #### Hello with query param

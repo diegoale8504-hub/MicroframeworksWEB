@@ -21,7 +21,6 @@ public class MicroWeb {
     }
 
     public static void staticfiles(String path) {
-        // Ej: "/webroot" o "webroot"
         staticRoot = path;
     }
 
@@ -45,7 +44,6 @@ public class MicroWeb {
             String requestLine = in.readLine();
             if (requestLine == null || requestLine.isBlank()) return;
 
-            // Consumir headers (por ahora no los usamos)
             String line;
             while ((line = in.readLine()) != null && !line.isEmpty()) { /* ignore */ }
 
@@ -54,8 +52,8 @@ public class MicroWeb {
             String fullUri = parts[1];
 
             URI uri = new URI(fullUri);
-            String path = uri.getPath();            // "/App/hello"
-            Map<String, String> query = parseQuery(uri.getRawQuery()); // name=Pedro
+            String path = uri.getPath();
+            Map<String, String> query = parseQuery(uri.getRawQuery());
 
             Request req = new Request(path, query);
             Response res = new Response();

@@ -11,6 +11,8 @@ public class Main {
 
         MicroWeb.get("/App/pi", (req, resp) -> String.valueOf(Math.PI));
 
+        MicroWeb.get("/App/hello", (req, resp) -> "Hello " + req.getValuesOrDefault("name", "world"));
+
         MicroWeb.start(8080);
     }
 }
